@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Studentmarks{
+public class practical02{
      
      private static final int num_subjects = 3;
      private static final int maths = 1;
@@ -20,7 +20,9 @@ public class Studentmarks{
         num_of_students = mykeyboard.nextInt();
         marks = new int[num_of_students][num_subjects];
 
-        while(true){
+        int condition = 0;
+
+        do{
             System.out.println("\n");
             System.out.println("1.Add Marks");
             System.out.println("2.Update Marks");
@@ -66,11 +68,17 @@ public class Studentmarks{
                   calc_total(student_id, num_subjects);
                   break;
 
+                case 6:
+                  System.out.println("Exit ...");
+                  condition = 1;
+                  break;
+  
+
                 default:
                   break;
 
         }
-     }
+     }while( condition == 0 );
 
    }
 
